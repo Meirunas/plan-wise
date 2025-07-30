@@ -454,21 +454,67 @@
 
           <!-- CTA row -->
           <!-- CTA row -->
-<div class="hidden md:flex flex-col justify-center px-4 md:px-6 py-2 bg-slate-700/25 md:col-span-3"></div>
-
           <div
-            v-for="(plan, index) in plans"
-            :key="`cta-${index}`"
-            :class="`flex flex-col justify-center p-4 bg-slate-700/25 md:border-l border-slate-700 order-${index + 1} md:order-none`"
+            class="hidden md:flex flex-col justify-center px-4 md:px-6 py-2 bg-slate-700/25 md:col-span-3"
+          ></div>
+
+          <!-- Starter -->
+          <div
+            class="flex flex-col justify-center p-4 bg-slate-700/25 md:border-l border-slate-700 order-1 md:order-none"
           >
-            <div v-if="annual" class="text-sm text-slate-400 text-center">Coming Soon</div>
+            <div v-if="annual" class="text-sm text-slate-400 text-center">
+              Coming Soon
+            </div>
             <a
               v-else
               class="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-xs group whitespace-nowrap text-center"
-              :href="plan.link"
+              href="#starter-link"
             >
               Free Trial
-              <span class="hidden lg:block tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+              <span
+                class="hidden lg:block tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"
+                >-&gt;</span
+              >
+            </a>
+          </div>
+
+          <!-- Agency -->
+          <div
+            class="flex flex-col justify-center p-4 bg-slate-700/25 md:border-l border-slate-700 order-2 md:order-none"
+          >
+            <div v-if="annual" class="text-sm text-slate-400 text-center">
+              Coming Soon
+            </div>
+            <a
+              v-else
+              class="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-xs group whitespace-nowrap text-center"
+              href="#agency-link"
+            >
+              Free Trial
+              <span
+                class="hidden lg:block tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"
+                >-&gt;</span
+              >
+            </a>
+          </div>
+
+          <!-- Team -->
+          <div
+            class="flex flex-col justify-center p-4 bg-slate-700/25 md:border-l border-slate-700 order-3 md:order-none"
+          >
+            <div v-if="annual" class="text-sm text-slate-400 text-center">
+              Coming Soon
+            </div>
+            <a
+              v-else
+              class="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-xs group whitespace-nowrap text-center"
+              href="#team-link"
+            >
+              Free Trial
+              <span
+                class="hidden lg:block tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"
+                >-&gt;</span
+              >
             </a>
           </div>
         </div>
@@ -481,7 +527,6 @@
 import { ref } from "vue";
 
 export default {
-  
   name: "Pricing",
   setup() {
     const annual = ref(false);
@@ -491,10 +536,4 @@ export default {
     };
   },
 };
-    const plans = [
-      { name: 'Starter', monthly: '25', annual: '20', link: '#starter-link' },
-      { name: 'Agency', monthly: '45', annual: '36', link: '#agency-link' },
-      { name: 'Team', monthly: '70', annual: '55', link: '#team-link' }
-    ]
-
 </script>
