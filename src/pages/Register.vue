@@ -33,7 +33,7 @@
           <div class="pt-32 pb-12 md:pt-40 md:pb-20">
             <!-- Page header -->
             <div class="max-w-3xl mx-auto text-center pb-12">
-              <h1 class="h2 font-hkgrotesk">Welcome back!</h1>
+              <h1 class="h2 font-hkgrotesk">Create account</h1>
             </div>
 
             <!-- Form -->
@@ -44,8 +44,9 @@
                     <label
                       class="block text-sm text-slate-400 font-medium mb-1"
                       for="email"
-                      >Email</label
                     >
+                      Email
+                    </label>
                     <input
                       id="email"
                       class="form-input text-sm py-2 w-full"
@@ -54,23 +55,16 @@
                     />
                   </div>
                   <div>
-                    <div class="flex justify-between">
-                      <label
-                        class="block text-sm text-slate-400 font-medium mb-1"
-                        for="password"
-                        >Password</label
-                      >
-                      <router-link
-                        class="text-sm font-medium text-indigo-500 ml-2"
-                        to="/reset-password"
-                        >Forgot?</router-link
-                      >
-                    </div>
+                    <label
+                      class="block text-sm text-slate-400 font-medium mb-1"
+                      for="password"
+                    >
+                      Password
+                    </label>
                     <input
                       id="password"
                       class="form-input text-sm py-2 w-full"
                       type="password"
-                      autocomplete="on"
                       required
                     />
                   </div>
@@ -79,11 +73,12 @@
                   <button
                     class="btn-sm text-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-xs group"
                   >
-                    Sign In
+                    Sign Up
                     <span
                       class="tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"
-                      >-&gt;</span
                     >
+                      -&gt;
+                    </span>
                   </button>
                 </div>
               </form>
@@ -116,19 +111,17 @@
                     />
                   </svg>
                 </div>
-                <span class="flex-auto text-rose-50 pl-3"
-                  >Continue With Google</span
-                >
+                <span class="flex-auto text-rose-50 pl-3">
+                  Continue With Google
+                </span>
               </button>
 
               <div class="text-center mt-6">
                 <div class="text-sm text-slate-500">
-                  Don't you have an account?
-                  <router-link
-                    class="font-medium text-indigo-500"
-                    to="/register"
-                    >Get Started</router-link
-                  >
+                  Already have an account?
+                  <router-link class="font-medium text-indigo-500" to="/signin">
+                    Sign in
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -140,12 +133,12 @@
 </template>
 
 <script>
+import Logo from "../partials/Logo.vue";
+
 export default {
-  name: "SignIn",
+  name: "Register",
   components: {
     Logo,
   },
 };
-
-import Logo from "../partials/Logo.vue";
 </script>

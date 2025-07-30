@@ -11,10 +11,10 @@
             </svg>
           </div>
           <div class="text-xl text-slate-500 italic mb-3">
-            "I had to work 8 hours a day on one app. With Cube, I only need one or two hours. I just need to work on creatives, because everything else is automated."
+          "Before PlanWise, managing my tasks was chaos. Now, everything is organized in one place - I set goals, track progress, and even get smart AI suggestions. It saves me hours every week."
           </div>
           <div class="text-slate-500 font-medium">
-            <a class="text-slate-300">Mirta Jiang</a> - <a class="text-indigo-500" href="#0">Paid Apps</a>
+            <a class="text-slate-300">Alex Reed</a> - <a class="text-indigo-500" href="#0">Designer</a>
           </div>
         </div>
 
@@ -25,6 +25,6 @@
 
 <script>
 export default {
-  name: 'SingleTestimonial',
+  name: 'TestimonialItem',
 }
 </script>

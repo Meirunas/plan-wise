@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './pages/Home.vue'
 import SignIn from './pages/SignIn.vue'
-import SignUp from './pages/SignUp.vue'
-import ResetPassword from './pages/ResetPassword.vue'
+import Register from './pages/Register.vue'
+import GetDemo from './pages/GetDemo.vue'
+import PasswordReset from './pages/PasswordReset.vue'
 
 const routerHistory = createWebHistory()
 
@@ -26,13 +27,17 @@ const router = createRouter({
       path: '/signin',
       component: SignIn
     },
+        {
+      path: '/register',
+      component: Register
+    },
     {
-      path: '/signup',
-      component: SignUp
+      path: '/get-demo',
+      component: GetDemo
     },    
     {
       path: '/reset-password',
-      component: ResetPassword
+      component: PasswordReset
     }
   ]
 })
